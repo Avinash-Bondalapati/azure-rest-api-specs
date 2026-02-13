@@ -136,14 +136,14 @@
             "mode": "Manual"
           },
           "resiliencyPolicy": {
-            "OperationRecoveryPolicy":{
-              "RestartRecoveryPolicy":{
+            "operationRecoverySettings": {
+              "restartRecoveryPolicy": {
                 "enabled": true
               },
-              "StartRecoveryPolicy":{
+              "startRecoveryPolicy": {
                 "enabled": true
               },
-              "ReimageRecoveryPolicy":{
+              "reimageRecoveryPolicy": {
                 "enabled": true
               }
             }
@@ -223,14 +223,14 @@
             "mode": "Manual"
           },
           "resiliencyPolicy": {
-            "OperationRecoveryPolicy":{
-              "RestartRecoveryPolicy":{
+            "operationRecoverySettings": {
+              "restartRecoveryPolicy": {
                 "enabled": true
               },
-              "StartRecoveryPolicy":{
+              "startRecoveryPolicy": {
                 "enabled": true
               },
-              "ReimageRecoveryPolicy":{
+              "reimageRecoveryPolicy": {
                 "enabled": true
               }
             }
