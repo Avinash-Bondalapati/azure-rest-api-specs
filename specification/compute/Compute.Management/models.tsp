@@ -3706,6 +3706,12 @@ model ResiliencyPolicy {
    */
   @added(Versions.v2025_04_01)
   zoneAllocationPolicy?: ZoneAllocationPolicy;
+
+  /**
+   * The configuration parameters used for operation recovery settings.
+   */
+  @added(Versions.v2025_11_01)
+  operationRecoverySettings?: OperationRecoverySettings;
 }
 
 /**
@@ -3724,6 +3730,60 @@ model ResilientVMCreationPolicy {
 model ResilientVMDeletionPolicy {
   /**
    * Specifies whether resilient VM deletion should be enabled on the virtual machine scale set. The default value is false.
+   */
+  enabled?: boolean;
+}
+
+/**
+ * The configuration parameters used for operation recovery settings on a virtual machine scale set.
+ */
+@added(Versions.v2025_11_01)
+model OperationRecoverySettings {
+  /**
+   * The configuration parameters used for restart recovery policy.
+   */
+  restartRecoveryPolicy?: RestartRecoveryPolicy;
+
+  /**
+   * The configuration parameters used for start recovery policy.
+   */
+  startRecoveryPolicy?: StartRecoveryPolicy;
+
+  /**
+   * The configuration parameters used for reimage recovery policy.
+   */
+  reimageRecoveryPolicy?: ReimageRecoveryPolicy;
+}
+
+/**
+ * The configuration parameters used while performing restart recovery.
+ */
+@added(Versions.v2025_11_01)
+model RestartRecoveryPolicy {
+  /**
+   * Specifies whether restart recovery should be enabled. The default value is false.
+   */
+  enabled?: boolean;
+}
+
+/**
+ * The configuration parameters used while performing start recovery.
+ */
+@added(Versions.v2025_11_01)
+model StartRecoveryPolicy {
+  /**
+   * Specifies whether start recovery should be enabled. The default value is false.
+   */
+  enabled?: boolean;
+}
+
+/**
+ * The configuration parameters used while performing reimage recovery.
+ */
+@added(Versions.v2025_11_01)
+model ReimageRecoveryPolicy {
+  /**
+   * Specifies whether reimage recovery should be enabled. The default value is false.
    */
   enabled?: boolean;
 }
